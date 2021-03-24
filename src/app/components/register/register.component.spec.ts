@@ -30,4 +30,16 @@ describe('RegisterComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('registro de usuario', () => {
+    const registerForm = {
+      name: "Joel",
+      lastName:"Flores",
+      age: 24,
+      dayBirth: "10/24/13",
+      password: "1234"
+    }
+
+    expect(component.onSingUp(registerForm)).toEqual();
+  });
 });

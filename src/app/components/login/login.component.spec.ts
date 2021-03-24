@@ -6,6 +6,7 @@ import { UserService } from 'src/app/services/user.service';
 import { FormBuilder } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
+import { UserSession } from 'src/app/model/userSession';
 
 
 
@@ -35,4 +36,13 @@ describe('LoginComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('Iniciar sesión', ()=> {
+    const loginForm:UserSession = {
+      username: "joel",
+      password: "1234,"
+    }
+    expect(component.onSingIn(loginForm)).toEqual();
+  })
+
 });

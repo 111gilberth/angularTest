@@ -40,13 +40,13 @@ export class LoginComponent implements OnInit {
   // Metodo que inicia sesión
   onSingIn(form:UserSession) {
    let response = this.userService.validateUser(form);
-   console.log(response);
+   /* console.log(response); */
 
    // Vericamos si todo esta bien
    if (response.response) {
     this.userService.singOnAuth();
     this.route.navigate(['home']);
-	 this.alertMessageError = "";
+	  this.alertMessageError = "";
     
    } else {
 

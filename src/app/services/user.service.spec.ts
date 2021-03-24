@@ -1,4 +1,5 @@
 import { TestBed } from '@angular/core/testing';
+import { UserSession } from '../model/userSession';
 
 import { UserService } from './user.service';
 
@@ -13,4 +14,5 @@ describe('UserService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
 });
