@@ -16,7 +16,7 @@ export class MainComponent implements OnInit {
   ngOnInit(): void {     
    // Accedemos al metodo getWords() del servicio
    this.wordsServices.getWords().subscribe(data=> {
-    console.log(data);
+   /*  console.log(data); */
     // Asignamos los datos a la varible listWords
     this.listWords = data;
   }); 

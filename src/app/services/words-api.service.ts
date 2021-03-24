@@ -18,7 +18,7 @@ export class WordsAPIService {
   /*  
   * Metodos para acceder al API  de WordsAPI
   */
-  getWords() {
+  getWords():Observable<any> {
     
     return this.http.get('https://wordsapiv1.p.rapidapi.com/words/word/synonyms',{
       headers: {
