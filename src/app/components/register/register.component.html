@@ -1,0 +1,39 @@
+<div>
+     <form [formGroup]="registerForm" (ngSubmit)="onSingUp(registerForm.value)">
+          <!--  -->
+          <h2>Ingrese sus datos de registro</h2>
+          <hr>
+
+          <div>
+               <label for="name">Name</label>
+               <input type="text" formControlName="name" required>
+          </div>
+
+          <div>
+               <label for="name">Last name</label>
+               <input type="text" formControlName="lastName">
+          </div>
+
+          <div class="form-control">
+               <div>
+                    <label for="name">Age</label>
+                    <input type="number" formControlName="age">
+               </div>
+     
+               <div>
+                    <label for="name">Day of Birth</label>
+                    <input type="date" formControlName="dayBirth">
+               </div>
+          </div>
+
+          <div>
+               <label for="name">Password</label>
+               <input type="password" formControlName="password">
+          </div>
+
+          <div>
+               <button type="submit" [disabled]="!registerForm.valid">Add</button>
+          </div>
+      
+     </form>
+</div>

@@ -1,0 +1,13 @@
+<div>
+     <h3>Welcome</h3>
+     <hr>
+     <h3>List of Words</h3>
+     <ul>
+          <h2 *ngIf="listWords.length < 1 ">
+               Cargando datos ...
+          </h2>
+          <li *ngFor="let word of listWords.synonyms">
+               <a routerLink="/tab" (click)="nextWordTab(word)">{{word | titlecase}}</a>
+          </li>
+     </ul>
+</div>
