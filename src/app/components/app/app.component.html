@@ -1,0 +1,27 @@
+<div>
+     <header>
+          <div class="nav-header">
+               <!-- Logo -->
+               <div class="content" id="logo">
+                    <a routerLink="/">WordsAPI - {{title}}</a>              
+               </div>
+
+               <!-- Navigation -->
+               <nav id="nav-bar">
+                    <ul *ngIf="userAuth.isAuth; else singUp" ><!-- *" -->
+                         <li><a routerLink="/home" routerLinkActive="active">Main</a></li>
+                         <li><a routerLink="/tab" routerLinkActive="active">Tab</a></li>
+                         <li><a routerLink="/profile" routerLinkActive="active">Profile</a></li>
+                    </ul>
+
+                    <ng-template #singUp>
+                         <a routerLink="/register" routerLinkActive="active">Singup</a>
+                    </ng-template>
+              
+               </nav>
+          </div>
+     </header>
+
+     <router-outlet></router-outlet>
+
+</div>

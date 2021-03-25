@@ -1,0 +1,28 @@
+<div>
+     <!-- Form singIn -->
+   <form [formGroup]="singForm" (ngSubmit)="onSingIn(singForm.value)">
+        <h2>Sing On</h2>
+        <hr/>
+        <br/>
+        <div>
+             <label for="username">Username:</label>
+             <input type="text" id="username" formControlName="username" autocomplete="none" required>
+        </div>
+
+        <div>
+             <label for="pass">Password</label>
+             <input type="password" name="pass" id="pass" formControlName="password" required>  
+        </div>
+
+        <div>
+             <label style="color: red;">{{alertMessageError}}</label>
+        </div>
+
+        <div>
+             <button type="submit" [disabled]="!singForm.valid">Login</button>
+        </div>
+
+        
+   </form>
+
+</div>

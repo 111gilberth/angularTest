@@ -1,0 +1,38 @@
+<div class="container">
+     <div class="content">
+          <form [formGroup]="searchForm" (ngSubmit)="onSearchWord(searchForm.value)">
+
+               <input type="search" placeholder="Buscar palabra" id="search" formControlName="word">
+
+               <div class="btn-form">
+                    <button type="buscar" class="bg-color">Buscar</button>
+               </div>
+
+               <h3>{{msgAlertNotFounWord}}</h3>
+          </form>
+
+          <div class="content-info-words">
+               <!-- {{sustantive | json}} -->
+               <h3>{{searchForm.value.word}}</h3>
+               <ul>
+                    <h3 *ngIf="listResult.length > 1">Definition</h3>
+
+                    <li *ngFor="let result of listResult">
+                         {{result.definition}}
+
+                    </li>
+
+                    <h3 *ngIf="listResult.length > 1">Synonyms</h3>
+
+                    <li *ngFor="let result of listResult">
+                         <ul>
+                              <li *ngFor="let synonym of result.synonyms">
+                                   {{synonym}}
+                              </li>
+                         </ul>
+
+                    </li>
+               </ul>
+          </div>
+     </div>
+</div>
